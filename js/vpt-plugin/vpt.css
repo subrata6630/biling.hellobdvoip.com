@@ -1,0 +1,256 @@
+﻿/*
+
+Plugin: VOIP Pricing Table - VOIP Calling Rates, SMS Rates, Mobile Top Up Rates Calculator
+Version: 1.0
+Author: themelooks
+Author Profile: https://codecanyon.net/user/themelooks
+
+NOTE:
+------
+PLEASE DO NOT EDIT THIS CSS FILE.
+WE MAY RELEASE FUTURE UPDATES, SO IT WILL OVERWRITE THIS FILE.
+
+*/
+
+/*
+
+[TABLE OF CONTENT]
+
+1. RATES AREA
+    1.1. RATES TAB NAV
+    1.2. RATES SELECTMENU
+    1.3. RATES TABLE
+    1.4. RATES MOBILE TOPUP
+
+2. MEDIA QUERIES
+
+*/
+
+/*--------------------------------
+    1. RATES AREA
+--------------------------------*/
+#rates {
+    padding: 80px 0 73px;
+    background-color: #fff;
+}
+
+/* 1.1. RATES TAB NAV */
+.rates--tab-nav {
+    margin-bottom: 60px;
+}
+
+.rates--tab-nav ul {
+    margin: -10px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+}
+
+.rates--tab-nav ul li {
+    display: inline-block;
+    margin: 10px 5px 0;
+}
+
+.rates--tab-nav ul li a {
+    padding: 12px 20px;
+    color: #fff;
+    background-color: #303030;
+    border-radius: 0;
+    -webkit-transition: background-color .25s ease;
+            transition: background-color .25s ease;
+}
+
+.rates--tab-nav ul li.active a,
+.rates--tab-nav ul li a:hover,
+.rates--tab-nav ul li a:focus {
+    color: #fff;
+    background-color: #03a9f4;
+    box-shadow: none;
+}
+
+/* 1.2. RATES SELECTMENU */
+#ratesSelectCurrency-menu,
+#ratesSelectCountry-menu,
+#ratesMSelectCountry-menu {
+    max-height: 200px;
+}
+
+.rates--select-menu label {
+    width: 100%;
+    margin-top: -7px;
+}
+
+.rates--select-menu .ui-selectmenu-button {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    background-color: #fff;
+    border-color: #e9e9e9;
+    border-radius: 0;
+    outline: 0;
+}
+
+.rates--select-menu .ui-selectmenu-button:active,
+.retes--mtopup-select .ui-selectmenu-button:active {
+    color: #303030;
+}
+
+#ratesSelectCurrency-menu .ui-menu-item-wrapper,
+#ratesSelectCountry-menu .ui-menu-item-wrapper,
+#ratesMSelectCountry-menu .ui-menu-item-wrapper {
+    padding: 8px 15px;
+}
+
+/* 1.3. RATES TABLE */
+.rates--table .table {
+    margin-top: 15px !important;
+    margin-bottom: 18px !important;
+}
+
+.rates--table .table th.th-currency,
+.rates--table .table th.th-vat {
+    text-align: right;
+}
+
+.rates--table .table td[data-rate],
+.rates--table .table td.bold {
+    font-weight: 700;
+    text-align: right;
+}
+
+.rates--table .dataTables_length .form-control,
+.rates--table .dataTables_filter .form-control {
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 16px;
+    line-height: 0;
+}
+
+.rates--table .dataTables_length .form-control {
+    margin: 0 11px;
+    padding: 4px 0 5px 15px;
+}
+
+.rates--table .dataTables_filter .form-control {
+    margin-left: 15px;
+    padding: 5px 14px 6px;
+}
+
+.rates--table .dataTables_paginate ul li a {
+    color: #303030;
+    border-radius: 0;
+}
+
+.rates--table .dataTables_paginate ul li.active a {
+    color: #fff;
+    background-color: #03a9f4;
+    border-color: #03a9f4;
+}
+
+/* 1.4. RATES MOBILE TOPUP */
+.retes--mtopup-select {
+    margin-bottom: 20px;
+}
+
+.retes--mtopup-select .ui-selectmenu-button {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 12px 15px;
+    background-color: #fff;
+    border-radius: 0;
+    outline: 0;
+}
+
+.retes--mtopup-select .ui-selectmenu-button:focus {
+    border-color: #66afe9;
+}
+
+.retes--mtopup-select .form-control {
+    height: auto;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.retes--mtopup-submit {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 11px 10px;
+    color: #fff;
+    background-color: #03a9f4;
+    border: none;
+    text-align: center;
+    -webkit-transition: background-color .25s ease-in-out;
+            transition: background-color .25s ease-in-out;
+    outline: 0;
+    cursor: pointer;
+}
+
+.retes--mtopup-submit:hover {
+    background-color: #303030;
+}
+
+/*--------------------------------
+    2. MEDIA QUERIES
+--------------------------------*/
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+    .retes--mtopup-select .ui-selectmenu-button,
+    .retes--mtopup-select .form-control {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .rates--table .dataTables_wrapper > .row:first-child > .col-sm-6 {
+        float: left;
+    }
+    .rates--table .dataTables_wrapper > .row:first-child > .col-sm-6:last-child {
+        float: right;
+    }
+    .rates--table .dataTables_wrapper .dataTables_length {
+        text-align: left;
+    }
+    .rates--table .dataTables_wrapper .dataTables_filter {
+        text-align: right;
+    }
+    .rates--table .dataTables_filter .form-control {
+        width: 166px;
+    }
+    
+    .rates--table .dataTables_wrapper .dataTables_info {
+        padding-top: 0;
+        margin-bottom: 20px;
+    }
+    .rates--table .dataTables_wrapper .dataTables_paginate {
+        font-size: 0;
+        line-height: 0;
+    }
+    .rates--table .dataTables_wrapper .dataTables_paginate .pagination {
+        margin: 0;
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rates--table .dataTables_length label,
+    .rates--table .dataTables_filter label {
+        font-size: 0;
+        line-height: 0;
+    }
+    .rates--table .dataTables_length label .form-control {
+        margin: 0;
+    }
+}
